@@ -56,12 +56,10 @@ class Server(Runner):
             kwargs['folder'] = json_data['folder']
             kwargs['port'] = json_data['port']
         else:
-            kwargs['username'] = input("Enter username:")
-            kwargs['password'] = input("Enter Password:")
             kwargs['url'] = input("Enter console url:")
             kwargs['machine_id'] = input("Enter machine id:")
             kwargs['license_key'] = input("Enter licenseKey:")
-            kwargs['folder'] = input("Enter process folder:")
+            kwargs['folder'] = input("Enter executions folder:")
             kwargs['port'] = float(input("Enter port to deploy runner:"))
 
         kwargs['server'] = self
