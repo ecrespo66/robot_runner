@@ -43,7 +43,7 @@ class Server(Runner):
     def __get_config_data(self):
         kwargs = {}
         config_file = os.path.dirname(os.path.abspath(__file__)) + "/config.json"
-
+        data = None
         if os.path.isfile(config_file):
             config_file = open(config_file, 'r')
             data = config_file.read()
