@@ -160,7 +160,7 @@ class Runner:
         try:
             if os.path.exists(f"{self.robot_folder}/.git"):
                 self.send_log(f"Pulling repo from {self.robot.repoUrl}")
-                git.cmd.Git(self.robot_folder).pull(self.robot.repoUrl, self.branch)
+                git.cmd.Git(self.robot_folder).pull(self.remote, self.branch)
                 self.send_log("Repo pulled successfully")
             else:
                 self.send_log(f"Cloning repo from {self.robot.repoUrl}")
