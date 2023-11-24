@@ -57,6 +57,7 @@ class Server(Runner):
             kwargs['port'] = json_data['port']
         else:
             kwargs['url'] = input("Enter console url:")
+            kwargs['token'] = input("Enter folder token:")
             kwargs['machine_id'] = input("Enter machine id:")
             kwargs['license_key'] = input("Enter licenseKey:")
             kwargs['folder'] = input("Enter executions folder:")

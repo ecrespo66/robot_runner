@@ -195,6 +195,7 @@ class Runner:
 
 
         command = " && ".join(command)
+        print(command)
         self.run_robot_process = subprocess.Popen(command,
                                                   shell=True,
                                                   bufsize=1,
@@ -211,8 +212,7 @@ class Runner:
                 if "error" in realtime_output.strip().lower():
                     self.send_log(realtime_output.strip(), "syex")
                 else:
-                    pass
-                    #self.send_log(realtime_output.strip())
+                    self.send_log(realtime_output.strip())
                 sys.stdout.flush()
         self.finish_execution()
         if self.run_robot_process.returncode != 0:
